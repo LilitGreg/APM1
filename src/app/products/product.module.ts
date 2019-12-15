@@ -14,9 +14,9 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule.forChild([
       {path: 'products' , component: ProductListComponent},
       {path: 'products/:id' , component: ProductDetailComponent,
-      resolve: {resolvedDate: ProductResolver } },
+      resolve: {resolvedData: ProductResolver } },
       {path: 'products/:id/edit' , component: ProductEditComponent,
-      resolve: {resolvedDate: ProductResolver } }
+      resolve: {resolvedData: ProductResolver } }
     ])
   ],
   declarations: [
