@@ -1,6 +1,8 @@
 import { ProductResolver } from './product-resolver.service';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import {AuthGuard} from '../user/auth.guard';
+
 
 import { ProductListComponent } from './product-list.component';
 import { ProductDetailComponent } from './product-detail.component';
@@ -16,6 +18,7 @@ import { ProductEditTagsComponent } from './product-edit/product-edit-tags.compo
     RouterModule.forChild([
       {
        path: 'products',
+       canActivate: [AuthGuard],
        children: [
          {
            path: '',
